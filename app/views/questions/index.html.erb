@@ -1,0 +1,26 @@
+<h2>質問一覧</h2>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead class="thead-light">
+        <tr>
+          <th>番号</th>
+          <th>題名</th>
+          <th>メニュー</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.id %></td>
+            <td><%= question.title %></td>
+            <td>
+              [編集]
+              [削除]
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
