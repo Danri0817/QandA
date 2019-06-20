@@ -1,2 +1,24 @@
-<h1>Questions#new</h1>
-<p>Find me in app/views/questions/new.html.erb</p>
+<div>
+  <!--col-offsetは左右に空白を開ける-->
+  <div class="col-md-4 col-offset-md-4">
+    <h2 class="text-center">新しい質問</h2>
+    <%= form_with model: @question, local: true do |f| %>
+      <div class="form-group">
+        <label>Name</label>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <label>Title</label>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <label>Content</label>
+        <%= f.text_area :content, class: "form-control" %>
+      </div>
+        
+      <div class="text-center">
+        <%= f.submit "Save", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

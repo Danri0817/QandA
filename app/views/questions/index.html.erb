@@ -15,12 +15,15 @@
             <td><%= question.id %></td>
             <td><%= question.title %></td>
             <td>
-              [編集]
+              [<%= link_to '編集', edit_question_path(question) %>]
               [削除]
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <div>
+      <%= link_to '新しい質問を投稿', new_question_path %>
+    </div>
   </div>
 </div>
